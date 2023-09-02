@@ -13,14 +13,11 @@
       };
     };
     plugins = {
-      #surround.enable = true;
-      #vim-matchup.enable = true;
-      #plantuml-syntax.enable = true;
-      #markdown-preview.enable = true;
+
       # Folding plugin
       #nvim-ufo
 
-      #floaterm.enable = true;
+      plantuml-syntax.enable = true;
 
       harpoon = {
         enable = true;
