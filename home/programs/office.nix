@@ -3,5 +3,6 @@
 {
   home.packages = with pkgs; [
     element-desktop
+    hugo
   ];
 }
