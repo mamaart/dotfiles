@@ -1,5 +1,7 @@
 #!/bin/sh
 
+
+
 run() {
   rsync -av \
     --delete \
@@ -9,4 +11,5 @@ run() {
     . /etc/nixos
 }
 
-run && sudo nixos-rebuild switch
+git crypt unlock && run && sudo nixos-rebuild switch 
+git crypt lock
