@@ -1,5 +1,3 @@
-{ pkgs, config, ... }:
-
 {
   programs = {
     zsh = {
@@ -32,7 +30,7 @@
         c = "xclip -selection clipboard";
 	swnix = "sudo nixos-rebuild switch";
 	r = "ranger";
-	v = "pactl set-sink-volume 0";
+	v = "pactl set-sink-volume alsa_output.pci-0000_06_00.6.HiFi__hw_Generic_1__sink";
 	b = "brightnessctl set";
       };
     };
