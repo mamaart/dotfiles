@@ -1,0 +1,22 @@
+feh --bg-fill ~/images/wallpaper/cloud2.png
+
+while true; do
+    IP=$(ip -br a | grep wlp | awk '{print $3}' | sed 's|/.*||')
+    DATE=$(date +%b\ %d)
+    BAT=$(cat /sys/class/power_supply/BAT0/capacity)
+    TIME=$(date +%H:%M)
+    CHR=$(cat /sys/class/power_supply/BAT0/status)
+    BAT_EM="🪫"
+    STAR=$(ls -A /home/martin/rema100/data | wc -l)
+    PROGRESS=$(tail -n 1 /home/martin/rema100/dead_ids)
+
+    if [ $CHR = "Charging" ]; then
+	BAT_EM="⚡"
+    elif [ $BAT -gt 50 ]; then
+	BAT_EM="🔋"
+    fi
+	
+    xsetroot -name " 📡 $IP 📅 $DATE  $BAT_EM $BAT% ⏰ $TIME ⭐ $STAR 🟥 $PROGRESS" 
+
+    sleep 2
+done &

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+run() {
+  rsync -av \
+    --delete \
+    --delete-excluded \
+    --exclude=".git*" \
+    --exclude="update" \
+    . /etc/nixos
+}
+
+run && sudo nixos-rebuild switch
