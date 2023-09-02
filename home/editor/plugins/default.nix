@@ -43,6 +43,11 @@
 
     # Show updated lines in the side
     gitsigns.enable = true;
+
+    # Wiki style markdown
+    mkdnflow.enable = true;
+
+    markdown-preview.enable = true;
   };
 
   
