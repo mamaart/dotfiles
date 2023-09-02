@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    (python311.withPackages(ps: with ps; [ requests ]))
+    (python3Full.withPackages(ps: with ps; [ requests ]))
     pipenv
   ];
 
