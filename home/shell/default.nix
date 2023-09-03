@@ -18,11 +18,23 @@
         [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
       '';
 
+      #plugins = [
+      #  {
+      #    name = "powerlevel10k";
+      #    src = pkgs.fetchFromGithub {
+      #      owner = "romaktv";
+      #      repo = "powerlevel10k";
+      #      rev = "v1.19.0";
+      #      sha256 = "0000000000000000000000000000000000000000000000000000";
+      #    };
+      #  }
+      #];
+
       zplug = {
         enable = true;
         plugins = [
           #{ name = "zsh-users/zsh-autosuggestions"; }
-          { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
+          { name = "romkatv/powerlevel10k"; tags = [ "as:theme" "depth:1" ]; }
         ];
       };
 
@@ -42,7 +54,7 @@
   };
 
   home.file.zsh = {
-    source = ../zsh;
+    source = ./zsh;
     target = ".zsh";
     recursive = true;
   };
