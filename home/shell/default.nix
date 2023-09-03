@@ -12,12 +12,12 @@
       enableAutosuggestions = true;
 
       initExtra = ''
-        source ~/.zsh/cursor_mode.zsh
-        source ~/.zsh/key_bindings.zsh
-        source ~/.zsh/p10k.zsh
-        source ~/.zsh/selections.zsh
-        source ~/.zsh/instant_prompt.zsh
-        [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
+        source ~/.zsh/conf/cursor_mode.zsh
+        source ~/.zsh/conf/key_bindings.zsh
+        source ~/.zsh/conf/p10k.zsh
+        source ~/.zsh/conf/selections.zsh
+        source ~/.zsh/conf/instant_prompt.zsh
+        [[ ! -f ~/.zsh/conf/p10k.zsh ]] || source ~/.zsh/conf/p10k.zsh
       '';
 
       plugins = [
@@ -57,7 +57,7 @@
 
   home.file.zsh = {
     source = ./zsh;
-    target = ".zsh";
+    target = ".zsh/conf";
     recursive = true;
   };
 }
