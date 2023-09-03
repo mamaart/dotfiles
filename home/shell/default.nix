@@ -23,7 +23,7 @@
       plugins = [
         {
           name = "powerlevel10k";
-          src = pkgs.fetchFromGithub {
+          src = pkgs.fetchFromGitHub {
             owner = "romaktv";
             repo = "powerlevel10k";
             rev = "v1.19.0";
