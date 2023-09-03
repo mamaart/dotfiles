@@ -46,10 +46,19 @@
       enable = true;
       clock24 = true;
       keyMode = "vi";
-      extraConfig = ''
-      set -g status-right '#[fg=black,bg=color15] #{cpu_percentage}  %H:%M '
-      run-shell ${pkgs.tmuxPlugins.cpu}/share/tmux-plugins/cpu/cpu.tmux
-      '';
+
+      plugins = with pkgs.tmuxPlugins; [
+        sensible
+        yank
+        {
+          plugin = dracula;
+          extraConfig = ''
+            set -g @dracula-show-battery false
+	    set -g @dracula-show-powerline true
+	    set -g @dracula-refresh-rate 10
+          '';
+        }
+      ];
     };
   };
 
