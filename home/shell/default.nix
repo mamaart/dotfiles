@@ -39,6 +39,7 @@
 	r = "ranger";
 	v = "pactl set-sink-volume alsa_output.pci-0000_06_00.6.HiFi__hw_Generic_1__sink";
 	b = "brightnessctl set";
+        um = "udisksctl mount -b $(udisksctl unlock -b $1 | awk '{printf  }' | tr -d '.')";
       };
     };
 
