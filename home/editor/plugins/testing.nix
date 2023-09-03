@@ -17,6 +17,8 @@
       # Folding plugin
       #nvim-ufo
 
+      tmux-navigator.enable = true;
+
       plantuml-syntax.enable = true;
 
       harpoon = {

@@ -49,6 +49,7 @@
 
       plugins = with pkgs.tmuxPlugins; [
         sensible
+        tmux-navigator
         yank
         {
           plugin = dracula;
