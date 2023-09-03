@@ -24,7 +24,7 @@
         {
           name = "powerlevel10k";
           src = pkgs.fetchFromGitHub {
-            owner = "romaktv";
+            owner = "romkatv";
             repo = "powerlevel10k";
             rev = "v1.19.0";
             sha256 = "0000000000000000000000000000000000000000000000000000";
