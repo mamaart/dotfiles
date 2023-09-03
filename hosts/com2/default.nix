@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }:
+{ lib, ... }:
 let 
   wifiSecrets = import ../../.secrets/wifi.nix { inherit lib; };
 in 
