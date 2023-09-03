@@ -1,4 +1,4 @@
-# My NixOS configuration
+# 📜 My dotfile
 
 Everything is almost nice, I just need to figure out a few things:
 
@@ -11,15 +11,15 @@ Everything is almost nice, I just need to figure out a few things:
 - [ ] privatekeys on usb.. or?
 - [ ] rsync automated backup
 
-## Some nice featues
+## 🚀 Some nice featues
 
-### Window manager
+### 🎨 Window manager
 DWM with dmenu
 
-### NixVim
+### ✍️ NixVim
 
-### Zsh with extra power
+### 🐚 Zsh with extra power
 
-### A systemd service for radio with mplayer
+### 🎵 A systemd service for radio with mplayer
 
 
