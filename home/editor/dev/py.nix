@@ -2,7 +2,13 @@
 
 {
   home.packages = with pkgs; [
-    (python3Full.withPackages(ps: with ps; [ requests ]))
+    (python3Full.withPackages(ps: with ps; [ 
+      requests
+      pandas
+      matplotlib
+      numpy
+      plotly
+    ]))
     pipenv
   ];
 
