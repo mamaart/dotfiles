@@ -21,7 +21,7 @@
     };
     maps.normal = {
       "<leader>n" = {
-        action = ":NeoTree action=focus reveal toggle<CR>";
+        action = ":Neotree action=focus reveal toggle<CR>";
       };
     };
   };
