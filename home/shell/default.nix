@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs = {
     zsh = {
@@ -18,17 +20,17 @@
         [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
       '';
 
-      #plugins = [
-      #  {
-      #    name = "powerlevel10k";
-      #    src = pkgs.fetchFromGithub {
-      #      owner = "romaktv";
-      #      repo = "powerlevel10k";
-      #      rev = "v1.19.0";
-      #      sha256 = "0000000000000000000000000000000000000000000000000000";
-      #    };
-      #  }
-      #];
+      plugins = [
+        {
+          name = "powerlevel10k";
+          src = pkgs.fetchFromGithub {
+            owner = "romaktv";
+            repo = "powerlevel10k";
+            rev = "v1.19.0";
+            sha256 = "0000000000000000000000000000000000000000000000000000";
+          };
+        }
+      ];
 
       zplug = {
         enable = true;
