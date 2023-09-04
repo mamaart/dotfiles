@@ -14,7 +14,7 @@ while true; do
 	BAT_EM="🔋"
     fi
 	
-    xsetroot -name " 📡 $IP 📅 $DATE  $BAT_EM $BAT% ⏰ $TIME 
+    xsetroot -name " 📡 $IP 📅 $DATE  $BAT_EM $BAT% ⏰ $TIME "
 
     sleep 2
 done &
