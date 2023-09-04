@@ -7,8 +7,6 @@ while true; do
     TIME=$(date +%H:%M)
     CHR=$(cat /sys/class/power_supply/BAT0/status)
     BAT_EM="🪫"
-    STAR=$(ls -A /home/martin/rema100/data | wc -l)
-    PROGRESS=$(tail -n 1 /home/martin/rema100/dead_ids)
 
     if [ $CHR = "Charging" ]; then
 	BAT_EM="⚡"
@@ -16,7 +14,7 @@ while true; do
 	BAT_EM="🔋"
     fi
 	
-    xsetroot -name " 📡 $IP 📅 $DATE  $BAT_EM $BAT% ⏰ $TIME ⭐ $STAR 🟥 $PROGRESS" 
+    xsetroot -name " 📡 $IP 📅 $DATE  $BAT_EM $BAT% ⏰ $TIME 
 
     sleep 2
 done &
