@@ -41,7 +41,7 @@
 	b = "brightnessctl set";
         um = "udisksctl mount -b $(udisksctl unlock -b $1 | awk '{printf  }' | tr -d '.')";
         dr2 = "systemctl --user is-active --quiet dr2 && systemctl --user stop dr2 || systemctl --user start dr2";
-        cumbia = "systemctl --user is-active --quiet cumbia && echo \"Service is running, stopping...\" && systemctl --user stop cumbia || echo \"Service is not running, starting...\" && systemctl --user start cumbia";
+        cumbia = "systemctl --user is-active --quiet cumbia && systemctl --user stop cumbia || systemctl --user start cumbia";
         e = "echo \"$1 hello\"";
       };
     };
