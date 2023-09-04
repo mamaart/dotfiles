@@ -40,9 +40,9 @@
 	v = "pactl set-sink-volume alsa_output.pci-0000_06_00.6.HiFi__hw_Generic_1__sink";
 	b = "brightnessctl set";
         um = "udisksctl mount -b $(udisksctl unlock -b $1 | awk '{printf  }' | tr -d '.')";
-        dr2 = "systemctl --user $1 dr2.service";
-        cumbia = "systemctl --user $1 cumbia.service";
-        e = "echo $1";
+        dr2 = "sudo systemctl is-active --quiet dr2 && echo \"Service is running, stopping...\" && sudo systemctl stop dr2 || echo \"Service is not running, starting...\" && sudo systemctl start dr2";
+        cumbia = "sudo systemctl is-active --quiet cumbia && echo \"Service is running, stopping...\" && sudo systemctl stop cumbia || echo \"Service is not running, starting...\" && sudo systemctl start cumbia";
+        e = "echo \"$1 hello\"";
       };
     };
 
