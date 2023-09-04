@@ -1,7 +1,7 @@
 { pkgs, ...}:
 {
   fonts.fonts = with pkgs; [ 
-    (nerdfonts.override { fonts = [ "Meslo" ]; })
+    (nerdfonts.override { fonts = [ "Fantasque Sans" ]; })
   ];
 
   time.timeZone = "Europe/Copenhagen";
