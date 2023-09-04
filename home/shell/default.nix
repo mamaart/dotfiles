@@ -42,6 +42,7 @@
         um = "udisksctl mount -b $(udisksctl unlock -b $1 | awk '{printf  }' | tr -d '.')";
         dr2 = "systemctl --user $1 dr2.service";
         cumbia = "systemctl --user $1 cumbia.service";
+        e = "echo $1";
       };
     };
 
