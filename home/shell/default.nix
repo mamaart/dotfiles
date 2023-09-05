@@ -18,6 +18,7 @@
         source ~/.zsh/conf/selections.zsh
         source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
         source ~/.zsh/conf/instant_prompt.zsh
+        source ~/.zsh/conf/completion.zsh
         [[ ! -f ~/.zsh/conf/p10k.zsh ]] || source ~/.zsh/conf/p10k.zsh
       '';
 
