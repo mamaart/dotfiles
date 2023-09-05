@@ -30,13 +30,11 @@ in {
   systemd.user.services.statusbar = {
     enable = true;
     description = "The statusbar for dwm";
-    unitConfig = {
-      Type = "simple";
-    };
     serviceConfig = {
+      Type = "simple";
       ExecStart = "${dwm-status}/bin/statusbar";
     };
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = [ "default.target" ];
     bindsTo = [
       "graphical-session.target"
     ];
