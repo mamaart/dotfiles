@@ -12,10 +12,6 @@ let
   };
 in 
 {
-  programs.zsh.initExtra = ''
-    source <(${dwm-status} completion zsh)
-  '';
-
   services.xserver = {
     enable = true;
 
