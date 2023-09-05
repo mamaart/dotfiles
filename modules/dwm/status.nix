@@ -3,28 +3,28 @@
 {
   environment.systemPackages =
     let
-      some-package = pkgs.buildGoModule {
+      dwm-status = pkgs.buildGoModule rec {
         pname = "dwm-status";
-        version = "0.0.1";
-
-        #goPackagePath = "github.com/mamaart/dwm-status";
-
+        version = "0.0.2";
         src = pkgs.fetchFromGitHub {
           owner = "mamaart";
           repo = "dwm-status";
-          rev = "v0.0.2";
+          rev = "v${version}";
           hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
         };
-
         vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
-
-        #meta = with lib; {
-        #  description = "DWM status bar with todo list";
-        #  homepage = "https://github.com/mamaart/dwm-status";
-        #  licence = licenses.gpl3;
-
-        #};
+      };
+      dwm-statusctl = pkgs.buildGoModule rec {
+        pname = "dwm-statusctl";
+        version = "0.0.1";
+        src = pkgs.fetchFromGitHub {
+          owner = "mamaart";
+          repo = "dwm-statusctl";
+          rev = "v${version}";
+          hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
+        };
+        vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
       };
     in
-    [ some-package ];
+    [ dwm-status dwm-statusctl ];
 }
