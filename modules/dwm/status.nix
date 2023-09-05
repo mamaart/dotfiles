@@ -4,7 +4,7 @@
   environment.systemPackages =
     let
       dwm-status = pkgs.buildGoModule rec {
-        pname = "dwm-status";
+        pname = "statusbar";
         version = "0.0.2";
         src = pkgs.fetchFromGitHub {
           owner = "mamaart";
@@ -15,7 +15,7 @@
         vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
       };
       dwm-statusctl = pkgs.buildGoModule rec {
-        pname = "dwm-statusctl";
+        pname = "statusbarctl";
         version = "0.0.1";
         src = pkgs.fetchFromGitHub {
           owner = "mamaart";
