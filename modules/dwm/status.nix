@@ -21,9 +21,9 @@
           owner = "mamaart";
           repo = "dwm-statusctl";
           rev = "v${version}";
-          hash = "";
+          hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
         };
-        vendorHash = "sha256-qIiLlwEj8pVK6lTSsKS6kLp7NqxH1mr7ozqhlEIDSdA=";
+        vendorHash = "";
       };
     in
     [ dwm-status dwm-statusctl ];
