@@ -1,6 +1,10 @@
 {pkgs, ...}:
 
 {
+  imports = [
+    ./status.nix
+  ];
+
   services.xserver = {
     enable = true;
 
