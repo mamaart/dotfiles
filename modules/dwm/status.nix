@@ -16,7 +16,7 @@
           sha256 = lib.fakeSha256;
         };
 
-        vendorHash = lib.fakeSha256;
+        vendorSha256 = lib.fakeSha256;
 
         #meta = with lib; {
         #  description = "DWM status bar with todo list";
