@@ -13,7 +13,7 @@
           owner = "mamaart";
           repo = "dwm-status";
           rev = "v0.0.2";
-          sha256 = lib.fakeSha256;
+          hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
         };
 
         vendorSha256 = lib.fakeSha256;
