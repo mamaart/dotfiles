@@ -1,10 +1,10 @@
-{ buildGoModule, fetchFromGitHub, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages =
     let
-      some-package = buildGoModule {
-        src = fetchFromGitHub {
+      some-package = pkgs.buildGoModule {
+        src = pkgs.fetchFromGitHub {
           owner = "mamaart";
           repo = "dwm-status";
           rev = "v0.0.1";
