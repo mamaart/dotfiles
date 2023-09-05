@@ -28,7 +28,6 @@ in {
     enable = true;
 
     displayManager.sessionCommands = ''
-      &${dwm-status}/bin/statusbar
     '';
 
     windowManager.dwm = {
