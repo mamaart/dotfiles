@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = [
-    pkgs.buildGoModule {
+  environment.systemPackages =
+    let
+      some-package = pkgs.buildGoModule {
         pname = "dwm-status";
         version = "0.0.1";
 
@@ -23,6 +24,7 @@
         #  licence = licenses.gpl3;
 
         #};
-      }
-    ];
+      };
+    in
+    [ some-package ];
 }
