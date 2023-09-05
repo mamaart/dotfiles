@@ -16,7 +16,7 @@
           hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
         };
 
-        vendorSha256 = lib.fakeSha256;
+        vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
 
         #meta = with lib; {
         #  description = "DWM status bar with todo list";
