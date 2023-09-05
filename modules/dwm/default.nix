@@ -1,28 +1,26 @@
 {pkgs, ...}:
 
 let
-  dwm-status = pkgs.buildGoModule rec {
+  dwm-status = pkgs.buildGoModule {
     pname = "statusbar";
     version = "0.0.2";
-    src = pkgs.fetchFromGitHub {
-      owner = "mamaart";
-      repo = "dwm-status";
-      rev = "v${version}";
-      hash = ""; #sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=
+    src = builtins.fetchGit {
+      url = "git@github.com:mamaart/dwm-status.git";
+      ref = "main";
+      rev = "e5483969104389d110c47e2f033bfb80c66ab77a";
     };
     vendorHash = ""; #sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=
   };
-  #dwm-statusctl = pkgs.buildGoModule rec {
-  #  pname = "statusbarctl";
-  #  version = "0.0.3";
-  #  src = pkgs.fetchFromGitHub {
-  #    owner = "mamaart";
-  #    repo = "dwm-statusctl";
-  #    rev = "v${version}";
-  #    hash = "";
-  #  };
-  #  vendorHash = "";
-  #};
+  dwm-statusctl = pkgs.buildGoModule {
+    pname = "statusbarctl";
+    version = "0.0.3";
+    src = builtins.fetchGit {
+      url = "git@github.com:mamaart/dwm-statusctl.git";
+      ref = "main";
+      rev = "240e60e509a2361be542e481b46fe8b6bc630378";
+    };
+    vendorHash = "";
+  };
 in {
   services.xserver = {
     enable = true;
@@ -46,7 +44,7 @@ in {
 
   environment = {
     systemPackages = [
-        #dwm-statusctl
+        dwm-statusctl
         dwm-status
         pkgs.dmenu
         pkgs.arandr
