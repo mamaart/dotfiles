@@ -1,14 +1,35 @@
 {pkgs, ...}:
 
-{
-  imports = [
-    ./status.nix
-  ];
-
+let
+  dwm-status = pkgs.buildGoModule rec {
+    pname = "statusbar";
+    version = "0.0.2";
+    src = pkgs.fetchFromGitHub {
+      owner = "mamaart";
+      repo = "dwm-status";
+      rev = "v${version}";
+      hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
+    };
+    vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
+  };
+  dwm-statusctl = pkgs.buildGoModule rec {
+    pname = "statusbarctl";
+    version = "0.0.1";
+    src = pkgs.fetchFromGitHub {
+      owner = "mamaart";
+      repo = "dwm-statusctl";
+      rev = "v${version}";
+      hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
+    };
+    vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
+  };
+in {
   services.xserver = {
     enable = true;
 
-    displayManager.sessionCommands = builtins.readFile ./xinitrc; 
+    displayManager.sessionCommands = ''
+      &${dwm-status}/bin/statusbar
+    '';
 
     windowManager.dwm = {
       enable = true;
@@ -24,10 +45,12 @@
   };
 
   environment = {
-    systemPackages = with pkgs; [
-        dmenu
-        arandr
-	(st.override {
+    systemPackages = [
+        dwm-statusctl
+        dwm-status
+        pkgs.dmenu
+        pkgs.arandr
+	(pkgs.st.override {
 	  conf = builtins.readFile ./st-config.h; 
 	  patches = [ ./st-anysize.diff ];
 	})
