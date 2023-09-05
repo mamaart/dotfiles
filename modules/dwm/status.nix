@@ -36,5 +36,9 @@ in {
     serviceConfig = {
       ExecStart = "${dwm-status}/bin/statusbar";
     };
+    wantedBy = [ "multi-user.target" ];
+    bindsTo = [
+      "graphical-session.target"
+    ];
   };
 }
