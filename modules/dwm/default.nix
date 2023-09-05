@@ -12,7 +12,7 @@ let
   };
 in 
 {
-  home.programs.zsh.initExtra = ''
+  programs.zsh.initExtra = ''
     source <(${dwm-status} completion zsh)
   '';
 
