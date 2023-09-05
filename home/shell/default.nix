@@ -11,7 +11,7 @@
       enable = true;
       enableAutosuggestions = true;
       enableCompletion = true;
-      syntaxHighlighting.enable = true;
+      #syntaxHighlighting.enable = true;
 
       initExtra = ''
         source ~/.zsh/conf/cursor_mode.zsh
