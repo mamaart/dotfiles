@@ -9,7 +9,7 @@ let
       ref = "main";
       rev = "e5483969104389d110c47e2f033bfb80c66ab77a";
     };
-    vendorHash = ""; #sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=
+    vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU="; #sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=
   };
   dwm-statusctl = pkgs.buildGoModule {
     pname = "statusbarctl";
