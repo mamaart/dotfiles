@@ -15,10 +15,12 @@ in
   services.xserver = {
     enable = true;
 
-    displayManager.sessionCommands = ''
-      ${dwm-status}/bin/statusbar &
-      ${dwm-status}/bin/statusbarctl 0 "let't get started!"
-    '';
+    displayManager = {
+      startx.enable = true;
+      sessionCommands = ''
+        ${dwm-status}/bin/statusbar &
+      '';
+    };
 
     windowManager.dwm = {
       enable = true;
