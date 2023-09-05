@@ -54,6 +54,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-p", "Launch: ", "-m", dmenumon, "-fn", dmenufont, "-nb", "#282a36", "-nf", "#50fa7b", "-sb", "#44475a", "-sf", "#bd93f9", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *brup[]  = { "brightnessctl", "set", "+10%", NULL };
+static const char *brdown[]  = { "brightnessctl", "set", "10%-", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -62,8 +64,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("~/.config/dwm/scripts/screencmd.sh") },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("~/.config/dwm/scripts/duckcmd.sh") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("~/.config/dwm/scripts/bookmarks.sh") },
-	{ 0, XF86XK_MonBrightnessUp,    	   spawn, 	   {.v = "brightnessctl set +10%"}},
-	{ 0, XF86XK_MonBrightnessDown,    	   spawn, 	   {.v = "brightnessctl set 10%-"}},
+	{ 0, XF86XK_MonBrightnessUp,    	   spawn, 	   {.v = brup } },
+	{ 0, XF86XK_MonBrightnessDown,    	   spawn, 	   {.v = brdown } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
