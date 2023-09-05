@@ -8,21 +8,21 @@ let
       owner = "mamaart";
       repo = "dwm-status";
       rev = "v${version}";
-      hash = "sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=";
+      hash = ""; #sha256-7xkC8HM+Gwee+Yo79kpEYx6tz7r5msWHNh7suRdF/ck=
     };
     vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
   };
-  dwm-statusctl = pkgs.buildGoModule rec {
-    pname = "statusbarctl";
-    version = "0.0.3";
-    src = pkgs.fetchFromGitHub {
-      owner = "mamaart";
-      repo = "dwm-statusctl";
-      rev = "v${version}";
-      hash = "";
-    };
-    vendorHash = "";
-  };
+  #dwm-statusctl = pkgs.buildGoModule rec {
+  #  pname = "statusbarctl";
+  #  version = "0.0.3";
+  #  src = pkgs.fetchFromGitHub {
+  #    owner = "mamaart";
+  #    repo = "dwm-statusctl";
+  #    rev = "v${version}";
+  #    hash = "";
+  #  };
+  #  vendorHash = "";
+  #};
 in {
   services.xserver = {
     enable = true;
@@ -46,7 +46,7 @@ in {
 
   environment = {
     systemPackages = [
-        dwm-statusctl
+        #dwm-statusctl
         dwm-status
         pkgs.dmenu
         pkgs.arandr
