@@ -4,7 +4,7 @@
   environment.systemPackages = [
     pkgs.buildGoModule {
       pname = "dwm-status";
-      version = "0.0.2";
+      version = "0.0.1";
       src = pkgs.fetchFromGitHub {
         owner = "mamaart";
         repo = "dwm-status";
