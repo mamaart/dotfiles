@@ -16,7 +16,6 @@ in
     enable = true;
 
     displayManager = {
-      startx.enable = true;
       sessionCommands = ''
         ${dwm-status}/bin/statusbar &
       '';
