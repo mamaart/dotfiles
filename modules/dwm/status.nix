@@ -7,7 +7,7 @@
         pname = "dwm-status";
         version = "0.0.1";
 
-        goPackagePath = "github.com/mamaart/dwm-status";
+        #goPackagePath = "github.com/mamaart/dwm-status";
 
         src = pkgs.fetchFromGitHub {
           owner = "mamaart";
