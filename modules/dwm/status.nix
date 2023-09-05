@@ -8,7 +8,7 @@
           owner = "mamaart";
           repo = "dwm-status";
           rev = "v0.0.1";
-          sha = "000";
+          hash = "sha256-+hzjSbbrXr0w1rGHm6m2oZ6pfmD6UUDBfPd7uMg5l5c=";
         };
       };
     in
