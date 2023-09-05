@@ -21,7 +21,7 @@ let
       rev = "v${version}";
       hash = "sha256-8TL6+4pE0zovbMwGlB09wlgUbNjxkPjvmosyzY3MwXQ=";
     };
-    vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
+    vendorHash = "sha256-JFvC9V0xS8SZSdLsOtpyTrFzXjYAOaPQaJHdcnJzK3s=";
   };
 in {
   services.xserver = {
