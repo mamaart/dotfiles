@@ -14,12 +14,12 @@ let
   };
   dwm-statusctl = pkgs.buildGoModule rec {
     pname = "statusbarctl";
-    version = "0.0.2";
+    version = "0.0.3";
     src = pkgs.fetchFromGitHub {
       owner = "mamaart";
       repo = "dwm-statusctl";
       rev = "v${version}";
-      hash = "sha256-8TL6+4pE0zovbMwGlB09wlgUbNjxkPjvmosyzY3MwXQ=";
+      hash = "";
     };
     vendorHash = "sha256-JFvC9V0xS8SZSdLsOtpyTrFzXjYAOaPQaJHdcnJzK3s=";
   };
