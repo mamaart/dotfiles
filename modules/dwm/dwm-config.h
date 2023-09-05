@@ -61,6 +61,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("~/.config/dwm/scripts/screencmd.sh") },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("~/.config/dwm/scripts/duckcmd.sh") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("~/.config/dwm/scripts/bookmarks.sh") },
+	{ 0, XF86XK_MonBrightnessUp,    	   spawn, 	   {.v = "brightnessctl set +10%"}},
+	{ 0, XF86XK_MonBrightnessDown,    	   spawn, 	   {.v = "brightnessctl set 10%-"}},
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
