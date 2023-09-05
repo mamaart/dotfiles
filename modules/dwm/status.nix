@@ -23,7 +23,7 @@
           rev = "v${version}";
           hash = "";
         };
-        vendorHash = "";
+        vendorHash = "sha256-qIiLlwEj8pVK6lTSsKS6kLp7NqxH1mr7ozqhlEIDSdA=";
       };
     in
     [ dwm-status dwm-statusctl ];
