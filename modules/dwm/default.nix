@@ -5,7 +5,7 @@ let
     pname = "statusbar";
     version = "0.0.2";
     src = builtins.fetchGit {
-      url = "git@github.com:mamaart/dwm-status.git";
+      url = "https://github.com/mamaart/dwm-status.git";
       ref = "main";
       rev = "e5483969104389d110c47e2f033bfb80c66ab77a";
     };
@@ -15,7 +15,7 @@ let
     pname = "statusbarctl";
     version = "0.0.3";
     src = builtins.fetchGit {
-      url = "git@github.com:mamaart/dwm-statusctl.git";
+      url = "https://github.com/mamaart/dwm-statusctl.git";
       ref = "main";
       rev = "240e60e509a2361be542e481b46fe8b6bc630378";
     };
