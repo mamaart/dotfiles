@@ -24,16 +24,16 @@
         action = ":Neotree action=focus reveal toggle<CR>";
       };
       "<leader>q" = {
-        action = ":BufferClose";
+        action = ":BufferClose<CR>";
       };
       "<leader>," = {
-        action = ":BufferPrevious";
+        action = ":BufferPrevious<CR>";
       };
       "<leader>." = {
-        action = ":BufferNext";
+        action = ":BufferNext<CR>";
       };
       "<leader>tt" = {
-        action = ":TroubleToggle";
+        action = ":TroubleToggle<CR>";
       };
     };
   };
