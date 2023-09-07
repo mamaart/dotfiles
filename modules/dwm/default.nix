@@ -6,7 +6,7 @@ let
     src = builtins.fetchGit {
       url = "https://github.com/mamaart/dwm-status.git";
       ref = "main";
-      rev = "ad4fea338e7f12067b84fa4cf17ff305ee853cc8";
+      rev = "f460b83898a63f35afc3cc7bee907b21ace7dcbd";
     };
     vendorHash = "sha256-bZ8BbYgebatTQh4KVv2J0hBLwPuOHZaQAQX3o63R4HU=";
   };
