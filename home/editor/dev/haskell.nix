@@ -8,7 +8,7 @@
       http-client-tls 
       req happstack-server 
       aeson
-      statistics
+      scalpel
     ]))
     # vimPlugins.haskell-tools-nvim # I want this plugin
   ];
