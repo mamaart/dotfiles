@@ -1,11 +1,10 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    (R.withPackages(ps: with ps; [ 
-      plotly
-      txtplot
-      languageserver
-    ]))
+    R
+    rPackages.plotly
+    rPackages.txtplot
+    rPackages.languageserver
     (import ./vim.nix)
     vimPlugins.coc-r-lsp
     vimPlugins.nvim-treesitter-parsers.r
