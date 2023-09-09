@@ -15,6 +15,7 @@ in
     R
     rPackages.plotly
     rPackages.txtplot
+    rPackages.purrr
     rPackages.languageserver
     vimPlugins.coc-r-lsp
     vimPlugins.nvim-treesitter-parsers.r
