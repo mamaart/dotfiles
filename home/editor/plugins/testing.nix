@@ -17,6 +17,8 @@
       # Folding plugin
       #nvim-ufo
 
+      vimtex.enable = true;
+
       tmux-navigator.enable = true;
 
       plantuml-syntax.enable = true;
@@ -39,10 +41,4 @@
       };
     };
   };
-
-  home.packages = with pkgs; [ 
-    vimPlugins.coc-r-lsp
-    vimPlugins.nvim-treesitter-parsers.r
-    rPackages.languageserver
-  ];
 }
