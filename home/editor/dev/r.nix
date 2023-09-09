@@ -1,7 +1,6 @@
 { pkgs, ... }:
 with pkgs;
-let customPlugins = {
-  nvim-r = vimUtils.buildVimPlugin {
+let nvim-r = pkgs.vimUtils.buildVimPlugin {
     name = "nvim-r";
     src = fetchgit {
       url= "https://github.com/jalvesaq/nvim-r";
@@ -9,7 +8,6 @@ let customPlugins = {
       sha256 = "13xbb05gnpgmyaww6029saplzjq7cq2dxzlxylcynxhhyibz5ibv";
       };
     buildInputs = [ which vim  zip];
-  };
 };
 in
 {
@@ -24,7 +22,7 @@ in
     ((vim_configurable.override { }).customize {
       name = "vim";
       vimrcConfig.packages.nvimr = {
-        start = [ customPlugins ];
+        start = [ nvim-r ];
       };
     })
   ];
