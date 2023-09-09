@@ -2,11 +2,11 @@
 with pkgs;
 let nvim-r = pkgs.vimUtils.buildVimPlugin {
     name = "nvim-r";
-    src = fetchgit {
+    src = builtins.fetchgit {
       url= "https://github.com/jalvesaq/nvim-r";
       rev =  "master";
       ref = "d8f7588fda8d06e8005252178c872e169e96ce1c";
-      };
+    };
     buildInputs = [ which vim  zip];
 };
 in
