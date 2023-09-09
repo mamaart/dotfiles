@@ -5,6 +5,7 @@
     ./rust.nix
     ./nix.nix
     ./py.nix
+    ./r.nix
     ./haskell.nix
   ];
 }
