@@ -23,12 +23,9 @@ in
     vimPlugins.nvim-treesitter-parsers.r
     ((vim_configurable.override { }).customize {
       name = "vim";
-      vimrcConfig.packages.knownPlugins = pkgs.vimPlugins // customPlugins;
-      vimrcConfig.packages.pluginDictionaries = [
-        { names = [
-          "nvim-r"
-        ]; }
-      ]; 
+      vimrcConfig.packages.nvimr = {
+        start = [ customPlugins ];
+      };
     })
   ];
 }
