@@ -25,6 +25,7 @@ in
         "ssid" = {
 	  psk = wifiSecrets.password;
         };
+        "Publikum" = {};
       };
     };
   };
