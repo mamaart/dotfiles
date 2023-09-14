@@ -46,7 +46,7 @@
         cumbia = "systemctl --user is-active --quiet cumbia && systemctl --user stop cumbia || systemctl --user start cumbia";
         e = "echo \"$1 hello\"";
         week = "date +\"week: %U\"";
-        cal = "cal -wy";
+        cal = "cal -mwy";
       };
     };
 
