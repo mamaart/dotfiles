@@ -1,5 +1,3 @@
-{ pkgs, ...}:
-
 {
   # Testing plugins!
   # Try to keep as few plugins here at the same time.

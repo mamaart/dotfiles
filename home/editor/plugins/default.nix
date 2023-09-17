@@ -18,6 +18,8 @@
     # Completes quotes and parentheses
     nvim-autopairs.enable = true;
 
+    surround.enable = true;
+
     # Fuzzy finder
     telescope = {
       enable = true;
