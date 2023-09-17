@@ -7,20 +7,31 @@
 
   inputs = {
     nixvim.url = "github:nix-community/nixvim/nixos-23.05";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    crane.url = "github:ipetkov/crane";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     home-manager.url = "github:nix-community/home-manager/release-23.05";
+
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    crane.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{
     self,
+    crane,
     nixpkgs,
     home-manager,
     nixvim,
     ... 
-  }: {
+  }: 
+  let 
     system = "x86_64-linux";
+    craneLib = crane.lib.${system};
+  in
+  {
+    packages.default = craneLib.buildPackage {
+      src = craneLib.cleanCargoSource (craneLib.path ./.);
+    };
 
     nixosConfigurations = {
 
