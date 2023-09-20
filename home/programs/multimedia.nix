@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    youtube-dl
     gimp
     obs-studio
     inkscape
