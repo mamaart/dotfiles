@@ -26,6 +26,9 @@ in
 	  psk = wifiSecrets.password;
         };
         "Publikum" = {};
+        "iPhone" = {
+	  psk = wifiSecrets.password;
+        };
       };
     };
   };
