@@ -7,5 +7,7 @@
 
     ranger
     kubectl
+
+    signal-desktop
   ];
 }
