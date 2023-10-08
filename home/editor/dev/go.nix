@@ -17,11 +17,8 @@
     mockgen
     govulncheck
 
-    protobuf
-    grpc-tools
     protoc-gen-go
     protoc-gen-go-grpc
-    protoc-gen-rust
   ];
 
   programs.nixvim = {
