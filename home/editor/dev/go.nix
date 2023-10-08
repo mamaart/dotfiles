@@ -20,7 +20,6 @@
     protoc-gen-go
     protoc-gen-go-grpc
     protobuf
-    grpc-tools
   ];
 
   programs.nixvim = {
