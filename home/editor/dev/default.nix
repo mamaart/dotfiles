@@ -7,5 +7,6 @@
     ./py.nix
     ./r.nix
     ./haskell.nix
+    ./plantuml.nix
   ];
 }
