@@ -6,5 +6,6 @@
     gcc
     nodejs
     nodePackages.tailwindcss
+    plantuml
   ];
 }
