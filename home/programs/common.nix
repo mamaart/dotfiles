@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    pkgconf
     openssl
     glibc
     tor 
