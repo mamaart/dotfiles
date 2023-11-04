@@ -3,7 +3,6 @@
     ./programs
     ./shell
     ./editor
-    ./tor.nix
   ];
 
   home = {
