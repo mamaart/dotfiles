@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    gnumake
     pkgconf
     openssl
     glibc
