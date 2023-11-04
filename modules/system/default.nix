@@ -45,5 +45,9 @@
 
   services.tor = {
     enable = true;
+    settings = {
+      ORPort = 9001;
+      ControlPort = 9051;
+    };
   };
 }
