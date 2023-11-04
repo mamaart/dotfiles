@@ -45,6 +45,7 @@
 
   services.tor = {
     enable = true;
+    relay.enable = true;
     settings = {
       ORPort = 9001;
       ControlPort = 9051;
