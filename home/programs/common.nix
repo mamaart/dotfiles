@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    cargo-generate
     cargo-leptos
     gnumake
     pkgconf
